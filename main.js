@@ -16,6 +16,8 @@ closeBtn.addEventListener('click', () => {
 
 const navBar = document.querySelector('header .container');
 const logo = document.querySelector('.nav-brand img');
+const navItems = document.querySelectorAll('.nav-item a');
+const underline = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
     const y = window.pageYOffset;
@@ -25,9 +27,14 @@ window.addEventListener('scroll', () => {
         navBar.style.position = "fixed";
         logo.classList.add('onScroll');
         burgerBtn.classList.add('onScroll');
+        navItems.forEach(navItem => navItem.classList.add('onScroll'));
+        underline.classList.add('onScroll');
     } else if (y === 0) {
         navBar.classList.remove('onScroll');
         burgerBtn.classList.remove('onScroll');
+        navList.classList.remove('onScroll');
+        navItems.forEach(navItem => navItem.classList.remove('onScroll'));
+        underline.classList.remove('onScroll');
     }
 })
 
