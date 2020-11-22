@@ -1,6 +1,8 @@
 //Opening and closing menu on click
 const burgerBtn = document.querySelector('.open');
 const navList = document.querySelector('.nav-list');
+const navItems = document.querySelectorAll('.nav-item a');
+
 
 burgerBtn.addEventListener('click', () => {
     navList.classList.add('active');
@@ -12,11 +14,14 @@ closeBtn.addEventListener('click', () => {
     navList.classList.remove('active');
 });
 
+navItems.forEach(navItem => navItem.addEventListener('click', () => {
+    navList.classList.remove('active');
+}))
+
 //dodanie cienia pod menu na telefonie
 
 const navBar = document.querySelector('header .container');
 const logo = document.querySelector('.nav-brand img');
-const navItems = document.querySelectorAll('.nav-item a');
 const underline = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
