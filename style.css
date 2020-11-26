@@ -141,6 +141,17 @@ nav.onScroll{
     color: var(--whiteFontColor);
 }
 
+.image-tools{
+    position: absolute;
+    bottom: -4rem;
+    right: -8rem;
+    height: 40rem;
+    width: 40rem;
+    transform: rotate(-40deg);
+    z-index: -1;
+    opacity: .13;
+}
+
 .nav-item{
     width: 70%;
     padding: 2rem 0;
@@ -410,10 +421,6 @@ footer{
     .main-message{
         transform: translateY(50%);
     }
-
-    html {
-        font-size: 12px;
-    }
 }
 
 @media screen and (min-width: 470px){
@@ -507,7 +514,15 @@ footer{
     }
     
     .nav-item{
-        padding: 1rem 0;
+        padding: 1.2rem 0;
+        width: 60%;
+    }
+
+    .image-tools{
+        right: -4.5rem;
+        height: 30rem;
+        width: 30rem;
+        transform: rotate(-50deg);
     }
 
     .gallery-grid{
@@ -540,6 +555,20 @@ footer{
     .testimonial-customer img{
         width: 7rem;
         height: 7rem;
+    }
+}
+
+@media (min-width:600px) and (orientation:landscape){
+
+    .nav-item{
+        padding: 1.6rem 0;
+    }
+
+    .image-tools{
+        right: -8rem;
+        bottom: -6rem;
+        height: 45rem;
+        width: 45rem;
     }
 }
 
