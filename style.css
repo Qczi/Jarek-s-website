@@ -64,9 +64,14 @@ header{
     z-index: 11;
 }
 
+header .container {
+    position: absolute;
+    width: 100%;
+}
+
 .container{
     width: 100%;
-    max-width: 98rem;
+    /* max-width: 98rem; */
     margin: 0 auto;
     padding: 0 1.5rem;
     transition: .5s;
@@ -580,6 +585,13 @@ footer{
         background-size: cover;
     }
 
+    header .container{
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 1200px;
+    }
+
     .main-message{
         transform: translate(-10%, 50%);   
     }
@@ -684,10 +696,7 @@ footer{
         box-shadow: 3px 10px 68px 0px rgba(0,0,0,0.75);
     }
 
-    header .container{
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    
 
     .main-message .btn:hover {
         background-color: var(--buttonColorOneHover);
